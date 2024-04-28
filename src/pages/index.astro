@@ -1,0 +1,65 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Camara</title>
+	</head>
+	<body>
+		<h1>Camara Remote Control</h1>
+		<h2>Use my old camera to see my village!</h2>
+		<canvas id="the_canvas" width="150" height="150"></canvas>
+		<div>
+			<div>
+				<label for="aperture">Aperture:</label>
+				<select id="aperture" name="aperture">
+					<option value="5.6">5.6</option>
+					<option value="8">8</option>
+				</select>
+			</div>
+			<div>
+				<label for="speed">Speed:</label>
+				<input type="text" id="speed" name="speed" />
+			</div>
+			<div>
+				<label for="iso">ISO:</label>
+				<input type="text" id="iso" name="iso" />
+			</div>
+			<div>
+				<label for="focus-distance">Focus Distance:</label>
+				<input type="text" id="focus-distance" name="focus-distance" />
+			</div>
+			<div>
+				<label for="number-of-pictures">Number of Pictures:</label>
+				<input
+					type="text"
+					id="number-of-pictures"
+					name="number-of-pictures"
+				/>
+			</div>
+			<div>
+				<label for="period">Period:</label>
+				<input type="text" id="period" name="period" />
+			</div>
+			<div>
+				<label for="start-date">Start Date:</label>
+				<input type="text" id="start-date" name="start-date" />
+			</div>
+			<div>
+				<button type="submit">Shoot</button>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script is:inline>
+	const canvas = document.getElementById("the_canvas");
+	const ctx = canvas.getContext("2d");
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+</script>
